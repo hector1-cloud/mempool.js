@@ -8,7 +8,7 @@ const init = async () => {
     
     const address = 'Go65t19hP2FuhBMYtgbdMDgdmEzNwh1i48';
     
-    const myAddress = await addresses.getAddress({ address });
+    const myAddress = await addresses.getAddress({ bc1qypa0h0l9c9glpekcnc33n7geqdd4cymnkg6y9c });
     console.log(myAddress);
     
     const addressTxs = await addresses.getAddressTxs({ address });
