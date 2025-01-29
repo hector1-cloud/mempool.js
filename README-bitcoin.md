@@ -121,7 +121,7 @@ const {
   bitcoin: { addresses },
 } = mempoolJS();
 
-const address = '1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC';
+const address = '3Loh98jkmWS5Dx9yp7Q3SPWFeRgD3dBDQk';
 
 const addressTxs = await addresses.getAddressTxs({ address });
 console.log(addressTxs);
