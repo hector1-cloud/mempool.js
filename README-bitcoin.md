@@ -1006,7 +1006,7 @@ Subscribe to address updates.
 [ [NodeJS Example](examples/nodejs/bitcoin/websocket.ts) ] [ [HTML Example](examples/html/bitcoin/websocket.html) ] [ [Top](#features) ]
 
 ```js
-websocket.wsTrackAddress(ws, '1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC'); // for in-browser websocket, use websocket.wsTrackAddressBrowser
+websocket.wsTrackAddress(ws, '3Loh98jkmWS5Dx9yp7Q3SPWFeRgD3dBDQk'); // for in-browser websocket, use websocket.wsTrackAddressBrowser
 ```
 
 ### **Stop Track Address**
@@ -1016,7 +1016,7 @@ Unsubscribe from address updates.
 [ [NodeJS Example](examples/nodejs/bitcoin/websocket.ts) ] [ [HTML Example](examples/html/bitcoin/websocket.html) ] [ [Top](#features) ]
 
 ```js
-websocket.wsStopTrackingAddress(ws, '1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC'); // for in-browser websocket, use websocket.wsStopTrackingAddressBrowser
+websocket.wsStopTrackingAddress(ws, '3Loh98jkmWS5Dx9yp7Q3SPWFeRgD3dBDQk'); // for in-browser websocket, use websocket.wsStopTrackingAddressBrowser
 ```
 
 ### **Track Addresses**
@@ -1026,7 +1026,7 @@ Subscribe to multiple address updates.
 [ [NodeJS Example](examples/nodejs/bitcoin/websocket.ts) ] [ [HTML Example](examples/html/bitcoin/websocket.html) ] [ [Top](#features) ]
 
 ```js
-websocket.wsTrackAddresses(ws, ['1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC']); // for in-browser websocket, use websocket.wsTrackAddressesBrowser
+websocket.wsTrackAddresses(ws, ['3Loh98jkmWS5Dx9yp7Q3SPWFeRgD3dBDQk']); // for in-browser websocket, use websocket.wsTrackAddressesBrowser
 ```
 
 ### **Stop Track Addresses**
