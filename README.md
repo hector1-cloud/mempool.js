@@ -40,7 +40,23 @@ const { bitcoin } = mempoolJS({
   hostname: 'mempool.space',
   network: 'testnet' // 'signet' | 'testnet' | 'mainnet',
   config: { // optional axios request config to add to requests
-    headers: {
+    headers: {{
+  "address": "1wiz18xYmhRX6xStj2b9t1rwWX4GKUgpv",
+  "chain_stats": {
+    "funded_txo_count": 10,
+    "funded_txo_sum": 15007686949,
+    "spent_txo_count": 5,
+    "spent_txo_sum": 15007599040,
+    "tx_count": 12
+  },
+  "mempool_stats": {
+    "funded_txo_count": 0,
+    "funded_txo_sum": 0,
+    "spent_txo_count": 0,
+    "spent_txo_sum": 0,
+    "tx_count": 0
+  }
+}
       authorization: 'Basic auth'
     }
   }
