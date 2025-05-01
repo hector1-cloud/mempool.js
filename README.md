@@ -76,7 +76,61 @@ Include the line below in the `head` tag of your html file.
 
 ```html
 <script type="text/javascript" src="https://mempool.space/mempool.js"></script>
-```
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <script src="./../../../dist/mempool.js"></script>
+    <script>
+      const init = async () => {
+        try {
+          const {
+            bitcoin: { websocket },
+          } = mempoolJS();
+
+          const ws = websocket.wsInitBrowser();
+
+          ws.addEventListener('message', function incoming({data}) {
+            console.log(JSON.parse(data.toString()));
+          });
+
+          websocket.wsWantDataBrowser(ws, ['blocks', 'stats', 'mempool-blocks', 'live-2h-chart']);
+
+          websocket.wsTrackAddressBrowser(ws, "1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC");
+
+          websocket.wsTrackAddressesBrowser(ws, [
+            "1wizSAYSbuyXbt9d8JV8ytm5acqq2TorC",
+          ]);
+
+          websocket.wsTrackTransactionBrowser(ws, "01313ca0148a1bbe5676e5dd6a84e76f8b39038658bd8c333d3b2d3f7ea6dd08");
+
+          websocket.wsTrackRbfSummaryBrowser(ws);
+
+          websocket.wsTrackRbfBrowser(ws, true);
+
+          websocket.wsTrackMempoolBlockBrowser(ws, 1);
+
+          setTimeout(() => {
+            websocket.wsStopDataBrowser(ws);
+            websocket.wsStopTrackingAddressBrowser(ws);
+            websocket.wsStopTrackingAddressesBrowser(ws);
+            websocket.wsStopTrackingTransactionBrowser(ws);
+            websocket.wsStopTrackingRbfSummaryBrowser(ws);
+            websocket.wsStopTrackingRbfBrowser(ws);
+            websocket.wsStopTrackingMempoolBlockBrowser(ws);
+          }, 60000);
+
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      init();
+    </script>
+  </head>
+  <body></body>
+</html>
+
 
 Call `mempoolJS()` function to access the API methods.
 
